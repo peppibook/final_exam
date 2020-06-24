@@ -151,23 +151,23 @@ Tourism_Receipts_2016 <- tbl1 %>%
   filter(YEAR==2016) %>% 
   select(YEAR, TOURISM.RECEIPTS)
 
+
 month = 1:12
 tr_2011 <- Tourism_Receipts_2011$TOURISM.RECEIPTS
 tr_2016 <- Tourism_Receipts_2016$TOURISM.RECEIPTS
 
-
 plot(month,                                # x data
-     tr_2011,                                # y data
+     tr_2016,                                # y data
      main="Tourism Receipts",
      type= "b",                            # Type of a graph 
      lty=1,                                # Type of a line
      col="red",                            # line color          
      xlab="Month ",                        # x axis
      ylab="Receipts",                      # y axis
-     #     ylim=c(1, 15)                         # y values(min, max)
+     ylim=c(650, 1800)                         # y values(min, max)
 )
 lines(month,                               # x data
-      tr_2016,                               # y data
+      tr_2011,                               # y data
       type = "b",                          # line type
       col = "blue")                        # line color
 
@@ -228,7 +228,6 @@ cat("The three main sections are ")
 # (4) Push 'apikey.R', 'exercise.R', 'index.Rmd', 'index.html' into your repo - Movie_Review.
 # (5) On the web portal page for your repo, click on the “Settings” tab, and scroll down to the section labeled “GitHub Pages.”
 # (6) Select the “master branch” option to enable GitHub Pages. (See 18.4 Sharing Reports as Websites in the textbook)
-
-
+# (7) Visit at https://GITHUB_USERNAME.github.io/Moive_Review
 
 # Thank you!
